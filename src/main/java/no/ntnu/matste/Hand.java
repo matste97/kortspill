@@ -31,7 +31,7 @@ public class Hand {
     }
 
     /**
-     * Checks if the hand cointans a card or not
+     * Checks if the hand contains a card or not
      * @param card
      * @return true/false
      */
@@ -47,7 +47,7 @@ public class Hand {
 
 
     /**
-     * Calculates the sum of all cards in hand, face value * 5
+     * Calculates the sum of all cards in hand
      * @return
      */
 

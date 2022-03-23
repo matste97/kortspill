@@ -33,9 +33,9 @@ public class DeckOfCards {
 
 
     /**
-     * Method that deals a hand of 5 cards to the player
+     * Method that deals a hand of cards to the player
      * @param n number of cards to be dealt
-     * @return a hand of cards
+     * @return n number of cards
      */
 
     public Hand dealHand(int n) {

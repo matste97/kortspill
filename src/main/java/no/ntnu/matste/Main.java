@@ -1,5 +1,6 @@
 package no.ntnu.matste;
 
+import javafx.application.Application;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -15,7 +16,7 @@ import javafx.scene.control.TextArea;
  * @version 2.0
  */
 
-public class Main extends App {
+public class Main extends Application {
 
     /**
      * main method to start the application
@@ -42,12 +43,22 @@ public class Main extends App {
 
         layout.setBackground(new Background(new BackgroundFill(Color.rgb(80,80,80), CornerRadii.EMPTY, Insets.EMPTY)));
 
+
+        /**
+         * button that deals a hand of 5 cards when pressed
+         */
+
         deck = new DeckOfCards();
         Button button = new Button("Deal Hand");
         button.setOnAction((event) -> {
             hand = deck.dealHand(5);
             area.setText(hand.toString());
         });
+
+        /**
+         * button that checks current hand for sum of value, number of hearts,
+         * if it contains queen of spades, and if its a flush
+         */
 
         Button button2 = new Button("Check Hand");
         button2.setOnAction((event) -> {
@@ -69,6 +80,7 @@ public class Main extends App {
 
         primaryStage.setTitle("Kortspill Miniprosjekt");
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
