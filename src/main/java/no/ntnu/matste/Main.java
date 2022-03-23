@@ -1,12 +1,12 @@
 package no.ntnu.matste;
 
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 
 
 /**
@@ -40,6 +40,8 @@ public class Main extends App {
         Scene scene = new Scene(layout, 300, 300);
         TextArea area = new TextArea();
 
+        layout.setBackground(new Background(new BackgroundFill(Color.rgb(80,80,80), CornerRadii.EMPTY, Insets.EMPTY)));
+
         deck = new DeckOfCards();
         Button button = new Button("Deal Hand");
         button.setOnAction((event) -> {
@@ -65,7 +67,7 @@ public class Main extends App {
         vbox.getChildren().addAll(area, button, button2);
         layout.getChildren().addAll(vbox);
 
-        primaryStage.setTitle("Kortspill miniprosjekt");
+        primaryStage.setTitle("Kortspill Miniprosjekt");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
